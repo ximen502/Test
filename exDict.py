@@ -38,6 +38,9 @@ p = provinces.get('辽宁')
 if not p:
     print("没有辽宁省的key")
 
+provinces['辽宁'] = '辽'
+del provinces['辽宁']
+
 # 程序将会报错终止
 print(provinces['辽宁'])
 
