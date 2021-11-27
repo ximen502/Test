@@ -14,4 +14,10 @@ private fun loopTraversal() {
         //println("hero at $index is ${list.get(index)}")
         println("hero at $index is ${list[index]}")
     }
+
+    var index = 0
+    while (index < list.size) {
+        println("while hero at $index is ${list[index]}")
+        index++
+    }
 }
