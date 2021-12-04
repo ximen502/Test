@@ -15,6 +15,10 @@ private fun loopTraversal() {
         println("hero at $index is ${list[index]}")
     }
 
+    for ((item, index) in list.withIndex()){
+        println("神箭八雄hero at $index is $item")
+    }
+
     var index = 0
     while (index < list.size) {
         println("while hero at $index is ${list[index]}")
