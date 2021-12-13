@@ -38,6 +38,8 @@ fun main() {
 }
 /* kotlin collection exercise: HashSet, LinkedHashSet, TreeSet */
 
+/* setOf() retun immutable; mutableSetOf(),hashSetOf(),linkedSetOf(),sortedSetOf() return mutable  */
+
 //[Java, Kotlin, Go]
 //[Java, Kotlin, Go]
 //setOf的返回对象的实际类型：class java.util.LinkedHashSet
