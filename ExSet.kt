@@ -25,6 +25,11 @@ fun exIt(){
     }
 
     set.forEach { println(it) }
+
+    println("-----------------")
+    for (i in set.indices) {
+        println(set.elementAt(i))
+    }
 }
 
 fun main() {
