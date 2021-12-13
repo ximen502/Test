@@ -17,8 +17,19 @@ fun ex() {
     println(treeSet) // 集合元素由小到大排序
 }
 
+// iterator the set
+fun exIt(){
+    var set = setOf("紫杉龙王","白眉鹰王","金毛狮王","青翼蝠王")
+    for(hero in set){
+        println(hero)
+    }
+
+    set.forEach { println(it) }
+}
+
 fun main() {
     ex()
+    exIt()
 }
 /* kotlin collection exercise: HashSet, LinkedHashSet, TreeSet */
 
