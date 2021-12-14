@@ -1,5 +1,4 @@
-// add,delete element from set
-fun main() {
+private fun exAdd() {
     var languages = mutableSetOf("Swift")
     languages.add("Go")
     languages.add("Lua")
@@ -8,4 +7,28 @@ fun main() {
 
     languages.addAll(setOf("Java", "Kotlin"))
     println(languages)
+}
+
+private fun exDel() {
+    var languages = mutableSetOf("Kotlin", "OC", "PHP", "Perl", "Ruby", "Go")
+    println(languages)
+
+    languages.remove("PHP")
+    languages.remove("Perl")
+    println(languages)
+
+    // delete more than one element
+    languages.removeAll(setOf("Ruby", "Go"))
+    println(languages)
+
+    // clear set
+    languages.clear()
+    println(languages.count())
+}
+
+// add,delete element from set
+fun main() {
+    exAdd()
+    println("-------------------------------")
+    exDel()
 }
