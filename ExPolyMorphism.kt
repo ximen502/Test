@@ -30,7 +30,7 @@ fun main(args: Array<String>) {
     println(sc.book)
     sc.base()
     sc.test()
-
+//相同类型的变量，调用同一个方法时呈现出多种不同自类的行为特征，这就是多态。
     println("......................")
     var polyMorphic: BaseClass2 = SubClass3()
     println(polyMorphic.book)
