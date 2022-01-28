@@ -30,5 +30,16 @@ jsonArray.append(uobj)
 jsonArray.append(uobj2)
 print(jsonArray)
 
+# 下面的这个方法并不能将这个list的数据转化为合法的jsonArray
 arr = json.dumps(jsonArray, ensure_ascii=False)
 print(arr)
+
+# list转json数组最终版，性能略差
+strList = []
+for obj in list:
+    str = json.dumps(obj, default=obj2Dict)
+    #print(str)
+    strList.append(str)
+ja = "[" + ",".join(strList) + "]"
+print(ja)
+#print(array)
