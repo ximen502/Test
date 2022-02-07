@@ -16,33 +16,7 @@ class HeartFrameKt : JFrame() {
             super.paintComponent(g)
             var g2: Graphics2D = g as Graphics2D
             g2.translate(width / 2, height / 2)
-            g2.stroke = BasicStroke(1.0f)
-            g2.color = Color.BLACK
-            g2.drawLine(-width / 2, 0, width / 2, 0)
-            g2.drawLine(0, -height / 2, 0, height / 2)
-            //unit=10,vertical line,x1,y1,x2,y2
-            val sl = 5
-            val ll = 10
-            //x axis
-            for (i in -width / 2..width / 2 step 10) {
-                if (i % 50 == 0) {
-                    g2.drawLine(i, 0, i, -ll)
-                } else {
-                    g2.drawLine(i, 0, i, -sl)
-                }
-            }
-            //println(height / 2)
-            //y axis
-            for (i in 0..height / 2 step 10) {
-                if (i % 50 == 0) {
-                    g2.drawLine(0, i, ll, i)
-                    g2.drawLine(0, -i, ll, -i)
-                } else {
-                    g2.drawLine(0, i, sl, i)
-                    g2.drawLine(0, -i, sl, -i)
-                }
-            }
-
+            drawAxis(g)
             //修线条粗细
             g2.stroke = BasicStroke(3.0f)
             g2.color = Color.RED
@@ -74,6 +48,38 @@ class HeartFrameKt : JFrame() {
             return (-zoom
                     * (13 * Math.cos(theta.toDouble()) - 5 * Math.cos((2 * theta).toDouble()) - (2
                     * Math.cos((3 * theta).toDouble())) - Math.cos((4 * theta).toDouble())))
+        }
+
+        fun drawAxis(g: Graphics?) {
+            var g2: Graphics2D = g as Graphics2D
+            g2.stroke = BasicStroke(1.0f)
+            g2.color = Color.BLACK
+            g2.drawLine(-width / 2, 0, width / 2, 0)
+            g2.drawLine(0, -height / 2, 0, height / 2)
+            //unit=10,vertical line,x1,y1,x2,y2
+            val sl = 5
+            val ll = 10
+            //x axis
+            for (i in 0..width / 2 step 10) {
+                if (i % 50 == 0) {
+                    g2.drawLine(i, 0, i, -ll)
+                    g2.drawLine(-i, 0, -i, -ll)
+                } else {
+                    g2.drawLine(i, 0, i, -sl)
+                    g2.drawLine(-i, 0, -i, -sl)
+                }
+            }
+            //println(height / 2)
+            //y axis
+            for (i in 0..height / 2 step 10) {
+                if (i % 50 == 0) {
+                    g2.drawLine(0, i, ll, i)
+                    g2.drawLine(0, -i, ll, -i)
+                } else {
+                    g2.drawLine(0, i, sl, i)
+                    g2.drawLine(0, -i, sl, -i)
+                }
+            }
         }
     }
 
