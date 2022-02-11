@@ -1,3 +1,4 @@
+import sys
 # 数据类型
 a = 0.5
 b = 6
@@ -34,3 +35,5 @@ print(str(2))
 print(str(3.0))
 print(str(True))
 #print(int('a', base=16))
+print(sys.float_info.max)
+print(sys.float_info.min)
