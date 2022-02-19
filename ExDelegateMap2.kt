@@ -16,4 +16,7 @@ fun main(args: Array<String>) {
     println(map["barCode"])
     println(map["name"])
     println(map["price"])
+
+    map["price"] = 999.88
+    println(item.price)
 }
