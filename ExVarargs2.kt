@@ -7,4 +7,6 @@ fun test(vararg books: String, num: Int) {
 
 fun main(args: Array<String>) {
     test("iOS", "Android", num = 25)
+    var arr = arrayOf("Go", "Ruby", "Python", "Zh")
+    test(*arr, num = 9)
 }
